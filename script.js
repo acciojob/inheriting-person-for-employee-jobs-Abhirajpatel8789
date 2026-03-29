@@ -3,7 +3,7 @@ function Person(name, age) {
     this.age = age;
 }
 Person.prototype.greet = function() {
-    return `Hello, my name is ${this.name}, I am ${this.age} years old`;
+    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
 };
 window.Person = Person;
 
@@ -15,7 +15,7 @@ Employee.prototype = Object.create(Person.prototype); // ✅ Add: inherit Person
 Employee.prototype.constructor = Employee;            // ✅ Add: fix constructor reference
 
 Employee.prototype.jobGreet = function() {
-    return `Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`;
+     console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
 };
 
 // Do not change code below this line
